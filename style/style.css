@@ -1,0 +1,11 @@
+body {
+  background-color:grey;
+}
+
+#gameContainer{
+  background-color: white;
+  height: 480px;
+  width:640px;
+  margin:0 auto;
+  margin-top: 10%;
+}
