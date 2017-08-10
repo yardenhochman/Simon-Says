@@ -5,4 +5,6 @@ function Player(name){
 	  							//thus increasing the memorization difficulty.
 	this.lives = 2;
 	this.currentSelection = [];
+
+
 }
