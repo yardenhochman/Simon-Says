@@ -1,4 +1,4 @@
-function ColorSequenceGenerator() {
+function ColorSequence() {
   this.sizeOfSequence = 50;
   this.colorSelection = ["red","yellow","green","blue"];
   this.theSequence = [];
@@ -6,8 +6,8 @@ function ColorSequenceGenerator() {
   this.sequenceGenerator = function() {
     for (let i=0 ; i<this.sizeOfSequence ; i++){
       let randomColorIndex = Math.floor(Math.random()*this.colorSelection.length);
-      let currentColor = colorSelection[randomColorIndex];
-      this.theSequences.push(currentColor);
+      let currentColor = this.colorSelection[randomColorIndex];
+      this.theSequence.push(currentColor);
     };
   };
   this.createButtons = function(){

@@ -3,9 +3,51 @@ body {
 }
 
 #gameContainer{
-  background-color: white;
+  background-color: black;
+  align-items: center;
   height: 480px;
   width:640px;
   margin:0 auto;
   margin-top: 10%;
+
 }
+
+.button{
+  text-align: center;
+  height:20em;
+  width: 25em;
+  border-radius: 25px;
+  border:none;
+  cursor: pointer;
+  /*border-radius: 50px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 20px;
+  padding: 100px 100px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000;*/
+}
+#Box1{
+background-color:#B20000;
+animation: glowing 1500ms infinite;
+}
+#Box2{
+background-color:yellow;
+}
+#Box3{
+background-color:green;
+}
+#Box4{
+background-color:#228DFF;
+animation:  1.5s ease-in-out infinite alternate;;
+}
+
+@keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}*/

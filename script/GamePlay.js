@@ -1,4 +1,4 @@
-function Play(){ //flash , player clicks
+function GamePlay(){ //flash , player clicks
 	/*this.continuation = function(){
 		while (this.player.currentSelection-1<this.colorSequence.sizeOfSequence){
 			this.flash();
@@ -19,6 +19,7 @@ function Play(){ //flash , player clicks
 		//runs after the playerSelection is done, checks if the arrays match
     //returns true if match, else false. game will use this method as a condition for a loop
     //add condition for game to reset if player gets 50 consecutive guesses
+    return false;
 		};
 
 }
