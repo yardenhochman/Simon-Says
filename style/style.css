@@ -30,23 +30,45 @@ body {
   text-align: center;
   text-decoration: none;
   background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000;*/
+  transition: background-color 500ms ease;
 }
-#Box1{
+.red{
 background-color:#B20000;
-animation: glowing 1500ms infinite;
-}
-#Box2{
-background-color:yellow;
-}
-#Box3{
-background-color:green;
-}
-#Box4{
-background-color:#228DFF;
-animation:  1.5s ease-in-out infinite alternate;;
+opacity:0.5;
+/*animation: glowing 1500ms infinite;
+*/}
+
+.red:hover , .red.flash{
+background-color:#FF0000;
+opacity:1;
 }
 
-@keyframes glowing {
+.yellow{
+background-color:#b2b200;
+opacity:0.5;
+}
+.yellow:hover , .yellow.flash{
+  background-color:#ffff00;
+  opacity:1;
+}
+.green{
+background-color:#004c00;
+opacity:0.5;
+}
+.green:hover , .green.flash{
+background-color:#329932;
+opacity:1;
+}
+.blue{
+background-color:#1762b2;
+opacity:0.5;
+}
+.blue:hover, .blue.flash{
+background-color:#64afff;
+opacity:1;
+}
+
+/*@keyframes glowing {
   0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
   50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
   100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
