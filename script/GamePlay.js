@@ -1,5 +1,11 @@
-function GamePlay(currentGame){ //flash , player clicks
+//Todo: priority: add failure
+//add speed changes. faster flashes every turn.
+//add lives
 
+function GamePlay(currentPlayer,currentGame){ //flash , player clicks
+
+  this.match = true;
+  //this.flashing = true; //a way for the game to determine if it's currently flashing
   this.verifyMatch = function(){
     return true;
   }
@@ -11,53 +17,77 @@ function GamePlay(currentGame){ //flash , player clicks
     //while (currentGame.player.currentSelection.length<currentGame.player.sequenceLength){
 
 
-      let choicesNumber = currentGame.player.currentSelection.length;
-      let currentLevel = currentGame.player.sequenceLength;
-      let currentArray = currentGame.colorSequence.theSequence.slice(0,currentLevel);
-
-        $("button").click(function(){
+/*      if (!(!this.flashing)){
+        $("button").addClass("clickable");
+      }
+      $("button").addClass("clickable");*/
+      flashing=false;
+      if (!(flashing)){
+      $("button").click(function(){
+        let choicesNumber = currentPlayer.currentSelection.length;
+        let currentLevel = currentPlayer.sequenceLength;
+        let currentArray = currentGame.colorSequence.theSequence.slice(0,currentLevel);
           let color = this.id;
-          currentGame.player.currentSelection.push(color);
-          var playerChose=currentGame.player.currentSelection;
-          console.log(currentGame.player.currentSelection);
+          currentPlayer.currentSelection.push(color);
+          var playerChose=currentPlayer.currentSelection;
           choicesNumber++;
-          if (choicesNumber==currentLevel){
+
+          console.log(currentPlayer.currentSelection);
+          if (choicesNumber===currentLevel){
             let gameContinues = compareArrays(playerChose,currentArray);
-            if (gameContinues){
-              debugger
-              return;
+            if (gameContinues){ //if was right, increase sequence length and flash
+                currentPlayer.currentSelection = [];
+                currentPlayer.sequenceLength++;
+                flashing=true;
+                currentPlayer.gamePlay.flash();
+                //currentPlayer.gamePlay.playerSelects();
             }
-            console.log("you lie!");
+            else{
+              announce(currentPlayer);
             }
-          });
+          }
+        });
+    }
   }
 
 	this.flash = function(){
 			//code manipulating element to display flashes according to the this.player.sequenceLength
-      var count = 0;
-      for (let i = 0 ; i < currentGame.player.sequenceLength ; i++){
-        let lightToFlash='#'+currentGame.colorSequence.theSequence[i];
+      console.log(flashing)
+      if(flashing===true){
+        $("button").off('click',)
+      let timesToFlash = currentPlayer.sequenceLength;
+      $("h1").html(timesToFlash);
+      $("h1").css("font-size","70px")
+      let flashes=currentGame.colorSequence.theSequence;
+      let turnModifier= (timesToFlash-2)*35;
+      if (turnModifier > 400){
+        turnModifier =400;
+      };
+      let darkDelay = 450-turnModifier*0.6; //min 200,150
+      let flashDelay= 700-turnModifier; //max 700,550
+      let count = 0;
+      for (let i = 0 ; i < timesToFlash ; i++){
+        let lightToFlash='#'+flashes[i];
         let currentButton = $(lightToFlash);
         setTimeout(function(){
           currentButton.addClass('flash');
           setTimeout(function(){
           currentButton.removeClass('flash');
-        } , 250); //dark delay
-
-
-        } , count*400); //lighting delay
+          } , darkDelay); //dark delay
+        } , count*flashDelay); //lighting delay
         count++;
-
       }
-
-	}
-	this.match = function(){
-		//runs after the playerSelection is done, checks if the arrays match
-    //returns true if match, else false. game will use this method as a condition for a loop
-    //add condition for game to reset if player gets 50 consecutive guesses
-    debugger
-    return true;
-		};
-
+         console.log(flashing);
+         setTimeout(function(){
+          flashing = false;
+          currentPlayer.gamePlay.playerSelects();
+          console.log(flashing)
+        },flashDelay*count);
+/*        if (timesToFlash-1===i){
+          this.flashing=false; //still not working
+        }*/
+      }
+	}/*
+  console.log(this.flashing);*/
 }
 

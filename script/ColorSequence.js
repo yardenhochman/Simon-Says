@@ -1,3 +1,6 @@
+//optional, add a method to check if player is reaching the limit, if he does
+//add to size of sequence
+
 function ColorSequence() {
   this.sizeOfSequence = 50;
   this.colorSelection = ["red","yellow","green","blue"];

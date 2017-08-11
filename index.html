@@ -9,10 +9,18 @@
 
     <div id="gameContainer">
       <div id="gameArea">
-        <button type="submit" class="button red" id="red">Box 1</button>
-        <button type="submit" class="button yellow" id="yellow">Box 2</button>
-        <button type="submit" class="button green" id="green">Box 3</button>
-        <button type="submit" class="button blue" id="blue">Box 4</button>
+      <div id='board'>
+      <div id='d1'>
+        <button type="submit" class="button red" id="red"></button>
+        <button type="submit" class="button yellow" id="yellow"></button>
+        </div>
+        <div class="blackCircle"><h1>Start</h1></div>
+        <div id='d2'>
+        <button type="submit" class="button green" id="green"></button>
+        <button type="submit" class="button blue" id="blue"></button>
+        </div>
+        </div>
+        <!-- <div class="blackCircle"><h1>Start</h1></div> -->
       </div>
     </div>
 
@@ -21,7 +29,6 @@
     <script src="script/ColorSequence.js"></script>
     <script src="script/GamePlay.js"></script>
     <script src="script/Player.js"></script>
-    <script src="script/Announce.js"></script>
     <script src="script/miscFunctions.js"></script>
     <script>
       let game = new Game();
