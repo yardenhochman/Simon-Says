@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="UTF-8">
     <title>Simon Says Game</title>
-    <link href="style/style.css" type="text/css" rel="stylesheet" />
+    <link href="style/style.css" rel="stylesheet" />
   </head>
-  <body>
+ 
+  <body> 
 
     <div id="gameContainer">
       <div id="gameArea">
-      <div id='board'>
-      <div id='d1'>
-        <button type="submit" class="button red" id="red"></button>
-        <button type="submit" class="button yellow" id="yellow"></button>
+        <div id="board">
+          <div id="d1">
+            <button type="submit" class="button red" id="red"></button>
+            <button type="submit" class="button yellow" id="yellow"></button>
+          </div>
+            <div class="blackCircle"><h1>Start</h1></div>
+          <div id="d2">
+            <button type="submit" class="button green" id="green"></button>
+            <button type="submit" class="button blue" id="blue"></button>
+          </div>
         </div>
-        <div class="blackCircle"><h1>Start</h1></div>
-        <div id='d2'>
-        <button type="submit" class="button green" id="green"></button>
-        <button type="submit" class="button blue" id="blue"></button>
-        </div>
-        </div>
-        <!-- <div class="blackCircle"><h1>Start</h1></div> -->
       </div>
     </div>
 
@@ -31,11 +32,15 @@
     <script src="script/Player.js"></script>
     <script src="script/miscFunctions.js"></script>
     <script>
+      happyDance();
+      setTimeout(function() {
       let game = new Game();
-      game.play();
+      },4000);
     </script>
 
   </body>
+
 </html>
 
 
+//TODO: make reset button, make highscore chart

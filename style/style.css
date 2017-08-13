@@ -1,20 +1,14 @@
-/*Todo: improve button visuals, improve visual feedback look. make it look more like the original game
-add sound*/
-
-
 body {
   background-color:black;
 }
 
-#gameContainer{
+#gameContainer {
   background-color: black;
   align-items: center;
   margin:auto;
-/*  margin:0 auto;
-  margin-top: 10%;*/
-
 }
-#gameArea{
+
+#gameArea {
   height: 800px;
   width:1200px;
   background-color: black;
@@ -22,16 +16,6 @@ body {
   z-index: 0;
   align-items:center;
 }
-
-/*.blackCircle{
-  position:absolute;
-  height:20rem;
-  width: 20rem;
-  margin: -38% 0 0 15.7%;
-  z-index: 1;
-  background-color:black;
-  border-radius: 50%;
-}*/
 
 .blackCircle {
     position: absolute;
@@ -43,88 +27,80 @@ body {
     background-color: black;
     border-radius: 50%;
 
-    margin-left: 218px;
+    margin-left: 224px;
     margin-top: -155px;
 }
 
-h1{
+h1 {
   text-align: center;
-  color:blue;
-  /*position:absolute;*/
+  font-size: 70px;
+  color:black;
+  text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
   margin-top:116px;
 
 }
 
-.button{
-
+.button {
   height:20rem;
   width: 20rem;
   border:none;
   cursor: pointer;
   margin:2rem;
-  /*border-radius: 50px;
-  border: none;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Arial;
-  font-size: 20px;
-  padding: 100px 100px;
-  text-align: center;
-  text-decoration: none;
-  background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000;*/
-  transition: background-color 500ms ease;
+  transition: background-color 400ms ease;
 }
 
-.red{
+.red {
 background-color:#B20000;
 opacity:0.5;
 border-radius: 30em 0 0 0;
-/*animation: glowing 1500ms infinite;
-*/}
+}
 
-.red:active , .red.flash{
-background-color:#FF0000;
+.red:active , 
+.red.flash {
+background-color:#ff7f7f;
 opacity:1;
 }
 
-.yellow{
+.yellow {
 background-color:#b2b200;
 opacity:0.5;
 border-radius: 0 30em 0 0;
 }
-.yellow:active , .yellow.flash{
-  background-color:#ffff00;
+
+.yellow:active , 
+.yellow.flash {
+  background-color:#ffff7f;
   opacity:1;
 }
-.green{
+
+.green {
 background-color:#004c00;
 opacity:0.5;
 border-radius: 0 0 0 30em;
 }
-.green:active , .green.flash{
+
+.green:active , 
+.green.flash {
 background-color:#329932;
 opacity:1;
 }
-.blue{
+
+.blue {
 background-color:#1762b2;
 opacity:0.5;
 border-radius: 0 0 30em 0;
-
 }
-.blue:active, .blue.flash{
+
+.blue:active, 
+.blue.flash {
 background-color:#64afff;
 opacity:1;
 }
 
-#board{
+#board {
   border:black solid 2px;
   width: 773px;
   margin: auto;
 }
 
-/*@keyframes glowing {
-  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
-  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-}*/
+
