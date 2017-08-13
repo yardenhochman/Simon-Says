@@ -17,6 +17,7 @@ incorperate a highscore chart in future iterations.
 More about the game logic:
 
 Color Sequence Generator:
+
 Size Of Sequence - specifies length of sequence to make
 Color selection -  array of 4 colors
 The sequence - Creates a new array. 
@@ -24,15 +25,14 @@ Sequence generator - Each spot is the array is assigned a random
 	color. 
 Create buttons - creates clickable elements on the UI, each 
 	Representing a different color.
-Player 
+
+Player :
+
 Name - Stores player name
 Sequence - Length, for the amount of flashes this turn
 Lives - each player gets 2 chances
 Current selection - stores array of player choices
 
-Play
-Continuation - executes the other methods in order
-	And continues until game needs to end - not sure about it
 Flash - method displaying part of the sequence
 Player selects - An event listener waiting for the player to recall
 Compare - method checks validity of player selection
