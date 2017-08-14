@@ -40,7 +40,6 @@ h1 {
 
 }
 
-<<<<<<< HEAD
 .reset{
   margin: 80px 80px 0 0 0;
   color:black;
@@ -52,8 +51,6 @@ h1 {
   width:8rem;
 }
 
-=======
->>>>>>> ee4c8d51d77b7699c61188754a6d77104e5912f3
 .button {
   height:20rem;
   width: 20rem;
@@ -69,11 +66,7 @@ opacity:0.5;
 border-radius: 30em 0 0 0;
 }
 
-<<<<<<< HEAD
 .red:active ,
-=======
-.red:active , 
->>>>>>> ee4c8d51d77b7699c61188754a6d77104e5912f3
 .red.flash {
 background-color:#ff7f7f;
 opacity:1;
@@ -85,11 +78,7 @@ opacity:0.5;
 border-radius: 0 30em 0 0;
 }
 
-<<<<<<< HEAD
 .yellow:active ,
-=======
-.yellow:active , 
->>>>>>> ee4c8d51d77b7699c61188754a6d77104e5912f3
 .yellow.flash {
   background-color:#ffff7f;
   opacity:1;
@@ -101,11 +90,7 @@ opacity:0.5;
 border-radius: 0 0 0 30em;
 }
 
-<<<<<<< HEAD
 .green:active ,
-=======
-.green:active , 
->>>>>>> ee4c8d51d77b7699c61188754a6d77104e5912f3
 .green.flash {
 background-color:#329932;
 opacity:1;
@@ -117,11 +102,7 @@ opacity:0.5;
 border-radius: 0 0 30em 0;
 }
 
-<<<<<<< HEAD
 .blue:active,
-=======
-.blue:active, 
->>>>>>> ee4c8d51d77b7699c61188754a6d77104e5912f3
 .blue.flash {
 background-color:#64afff;
 opacity:1;
