@@ -80,7 +80,11 @@ const happyDance = function() {
       currentButton.removeClass('flash');
       } , darkDelay); //dark delay
     } , count * flashDelay); //lighting delay
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> ee4c8d51d77b7699c61188754a6d77104e5912f3
     count += 1;
   }
   setTimeout(function() {
@@ -103,6 +107,7 @@ const happySound = function(){
   winSound.play();
 }
 
+<<<<<<< HEAD
 const initiateResetButton = function(){
   let $reset = $('.reset');
       $reset.click(function(){
@@ -110,6 +115,8 @@ const initiateResetButton = function(){
       });
 }
 
+=======
+>>>>>>> ee4c8d51d77b7699c61188754a6d77104e5912f3
 /*const lossEffect = function(){
 
 }*/
@@ -123,4 +130,8 @@ Code Logic:
 
 
 
+<<<<<<< HEAD
 */
+=======
+*/
+>>>>>>> ee4c8d51d77b7699c61188754a6d77104e5912f3

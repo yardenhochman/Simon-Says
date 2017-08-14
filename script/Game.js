@@ -9,7 +9,11 @@ class Game {
 
 /**
 
+<<<<<<< HEAD
 TODO:
+=======
+TODO: 
+>>>>>>> ee4c8d51d77b7699c61188754a6d77104e5912f3
 
 start button. welcome screen with animation. Make animations more fun
 reset button
@@ -21,6 +25,7 @@ remove save of 'this'
 Logic:
 color sequence - generates the flashing colors order
 
+<<<<<<< HEAD
 player - creates a player object so as to allow adding a
          multiplayer feature
 
@@ -30,6 +35,17 @@ generator - the actual function to create a random list
 flash - the function that flashes the lights.
         This function will call a function that lets
         the player click the buttons. The game proceeds
+=======
+player - creates a player object so as to allow adding a 
+         multiplayer feature
+
+generator - the actual function to create a random list 
+            of colors
+
+flash - the function that flashes the lights. 
+        This function will call a function that lets 
+        the player click the buttons. The game proceeds 
+>>>>>>> ee4c8d51d77b7699c61188754a6d77104e5912f3
         by these functions calling each other back and forth.
 
 

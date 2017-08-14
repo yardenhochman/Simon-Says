@@ -1,4 +1,5 @@
 class Player {
+<<<<<<< HEAD
   constructor(currentGame) {
     this.name = 'you';
     this.sequenceLength = 2;
@@ -6,6 +7,15 @@ class Player {
     this.currentSelection = [];
     this.gamePlay = new GamePlay(this,currentGame);
   }
+=======
+	constructor(currentGame) {
+		this.name = 'you';
+		this.sequenceLength = 2;
+		this.lives = 2;
+		this.currentSelection = [];
+		this.gamePlay = new GamePlay(this,currentGame);
+	}
+>>>>>>> ee4c8d51d77b7699c61188754a6d77104e5912f3
 }
 
 
