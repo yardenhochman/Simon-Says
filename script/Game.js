@@ -1,25 +1,42 @@
-
-function Game() {
+class Game {
+  constructor() {
   this.colorSequence = new ColorSequence();
-                              //generates a sequence and builds ui elements
-  this.player = new Player("You"); //in the future will add a method to take player name when
-                              //multiplayeris enabled
-
-  this.gamePlay = new GamePlay(this);     //the actual gameplay happens here until it's game over
-  this.announce = new Announcements();
-                              //will create announcements based on results
-  this.play = function(){
-
-    this.colorSequence.sequenceGenerator();
-    //this.colorSequence.createButtons(); to be defined
-    do {
-      this.gamePlay.flash();
-      this.gamePlay.playerSelects();
-      console.log(`I'm here`);
-      //this.Player.sequenceLength++;
-    }
-    while (this.match);
-    //this.announce.rounds;
-
+  this.player = new Player(this);
+  this.colorSequence.sequenceGenerator();
+  this.player.gamePlay.flash();
   }
 }
+
+/**
+
+TODO:
+
+start button. welcome screen with animation. Make animations more fun
+reset button
+high score list. option to reset list
+Try to figure out the logic for multiplayer
+remove save of 'this'
+
+
+Logic:
+color sequence - generates the flashing colors order
+
+player - creates a player object so as to allow adding a
+         multiplayer feature
+
+generator - the actual function to create a random list
+            of colors
+
+flash - the function that flashes the lights.
+        This function will call a function that lets
+        the player click the buttons. The game proceeds
+        by these functions calling each other back and forth.
+
+
+materials for reference:
+function foo() {
+  return () => {
+    console.log(this);
+  };
+}
+*/
