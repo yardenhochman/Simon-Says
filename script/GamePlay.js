@@ -5,7 +5,7 @@ class GamePlay {
     this.flashing = true;
 
 
-    this.flash = function() {
+    this.flash = () => {
       this.flashing = true;
       let $h1 = $('h1');
       let $button = $('.button');
@@ -25,18 +25,18 @@ class GamePlay {
         for (let i = 0 ; i < timesToFlash ; i ++){
           let lightToFlash = '#' + flashes[i];
           let currentButton = $(lightToFlash);
-          setTimeout(function() {
+          setTimeout( () => {
             currentButton.addClass('flash');
             let colorSound = new Audio()
             playSound(flashes[i],colorSound,450);
-            setTimeout(function() {
+            setTimeout( () => {
               currentButton.removeClass('flash');
               colorSound.pause();
             } , darkDelay); //dark delay
           } , count * flashDelay); //lighting delay
           count += 1;
         }
-         setTimeout(function() {
+         setTimeout( () => {
           this.flashing = false;
           $h1.html('Ready');
           currentPlayer.gamePlay.playerSelects();
@@ -45,11 +45,12 @@ class GamePlay {
     }
 
 
-    this.playerSelects = function() {
+    this.playerSelects = () => {
       this.flashing = false;
       let $colorButton = $('.button');
       if (!(this.flashing)){
         $colorButton.click(function() {
+          
           let choicesNumber = currentPlayer.currentSelection.length;
           let currentLevel = currentPlayer.sequenceLength;
           let currentArray = currentGame.colorSequence.theSequence.slice(0,currentLevel);
@@ -60,7 +61,7 @@ class GamePlay {
           let playerChose = [...currentPlayer.currentSelection];
           choicesNumber += 1;
             if (choicesNumber === currentLevel) {
-              setTimeout(function() {
+              setTimeout( () => {
                 colorSound.pause();
                 let gameContinues = compareArrays(playerChose,currentArray);
                 if (gameContinues) {

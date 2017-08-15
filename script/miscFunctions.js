@@ -1,4 +1,4 @@
-const compareArrays = function(array1,array2){
+const compareArrays = (array1,array2) => {
   for (let i = 0 ; i < array1.length ; i ++) {
     if (!(array1[i] === array2[i])) {
       return false;
@@ -8,7 +8,7 @@ const compareArrays = function(array1,array2){
   return true;
 }
 
-const announce = function(player) {
+const announce = player => {
     let lossSound = new Audio();
     playSound('fail',lossSound,20000)
     let $h1 = $('h1');
@@ -25,14 +25,14 @@ const announce = function(player) {
         addedDelay += 1500;
         if (highscore < player.sequenceLength) {
           localStorage.setItem('highscore', player.sequenceLength);
-          setTimeout(function() {
+          setTimeout( () => {
             $h1.html('Congratulations! You just set a personal record!');
             happySound();
           } , 1500);
 
           addedDelay += 1500;
         } else {
-          setTimeout(function() {
+          setTimeout( () => {
             $h1.css('font-size','35px')
             $h1.html(`Your highest score is still ${highscore}!`);
           } , 1500);
@@ -49,15 +49,15 @@ const announce = function(player) {
 
 
 
-const resetGame = function(delayTime) {
+const resetGame = delayTime =>{
   delayTime = delayTime || 0;
-  setTimeout(function(){
+  setTimeout( () => {
           location.reload();
           } , 1500 + delayTime);
 }
 
 
-const happyDance = function() {
+const happyDance = () => {
   let darkDelay = 80;
   let flashDelay = 90;
   let $h1 = $('h1');
@@ -74,39 +74,40 @@ const happyDance = function() {
   for (let i = 0 ; i < flashes.length ; i ++){
     let lightToFlash = '#' + flashes[i];
     let currentButton = $(lightToFlash);
-    setTimeout(function() {
+    setTimeout( () => {
       currentButton.addClass('flash');
-      setTimeout(function() {
+      setTimeout( () => {
       currentButton.removeClass('flash');
       } , darkDelay); //dark delay
     } , count * flashDelay); //lighting delay
+    
     count += 1;
   }
-  setTimeout(function() {
+  setTimeout( () => {
       $h1.html('Ready');
     },flashDelay * count);
 }
 
-const playSound = function(color,toPlay,maxlength){
+const playSound = (color,toPlay,maxlength) => {
   toPlay.src = `sound/${color}.mp3`;
   toPlay.play();
-  setTimeout(function() {
+  setTimeout( () => {
     toPlay.pause();
   }, maxlength);
 }
 
 
-const happySound = function(){
+const happySound = () => {
   let winSound = new Audio();
   winSound.src=`sound/correct.mp3`;
   winSound.play();
 }
 
-const initiateResetButton = function(){
+const initiateResetButton = () => {
   let $reset = $('.reset');
-      $reset.click(function(){
-        resetGame(-1500);
-      });
+  $reset.click( () => {
+    resetGame(-1500);
+  })
 }
 
 /*const lossEffect = function(){
@@ -119,8 +120,4 @@ TODO:
 
 Code Logic:
 
-
-
-
-<<<<<<< HEAD
 */

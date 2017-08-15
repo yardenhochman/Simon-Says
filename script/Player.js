@@ -1,7 +1,7 @@
 class Player {
   constructor(currentGame) {
     this.name = 'you';
-    this.sequenceLength = 2;
+    this.sequenceLength = 17;
     this.lives = 2;
     this.currentSelection = [];
     this.gamePlay = new GamePlay(this,currentGame);

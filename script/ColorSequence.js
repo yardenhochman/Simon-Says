@@ -4,7 +4,7 @@ class ColorSequence {
     this.colorSelection = ['red','yellow','green','blue'];
     this.theSequence = [];
 
-    this.sequenceGenerator = function() {
+    this.sequenceGenerator = () => {
       for (let i = 0 ; i < this.sizeOfSequence ; i ++) {
         let randomColorIndex = Math.floor(Math.random() * this.colorSelection.length);
         let currentColor = this.colorSelection[randomColorIndex];
