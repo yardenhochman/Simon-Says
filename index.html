@@ -3,35 +3,50 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>Weather App</title>
+    <title>Simon Says Game</title>
     <link href="style/style.css" rel="stylesheet" />
   </head>
+
   <body>
 
-    <div id="mainContainer">
-      <div id="mainArea">
+    <div id="gameContainer">
+      <div id="gameArea">
+        <button class="reset">Reset</button>
+
+  <body>
+
+    <div id="gameContainer">
+      <div id="gameArea">
         <div id="board">
-            <form action="#" class="locationForm">action: where to send data, method: defines which HTTP method to send the data with (get or post)
-              <div>
-                  <label for="location">Enter Your Zipcode:</label>
-                  <input id="zipcode">
-              </div>
-              <div class="button">
-                <button class="submit">Let's see</button>
-              </div>
-            </form>
-            <div class = 'result'>
-                <div class = 'city'></div>
-                <div class = 'currentTemp'></div>
-                <div class = 'description'></div>
-                <div class = 'minTemp'></div>
-                <div class = 'maxTemp'></div>
-            </div>
+          <div id="d1">
+            <button type="submit" class="button red" id="red"></button>
+            <button type="submit" class="button yellow" id="yellow"></button>
+          </div>
+            <div class="blackCircle"><h1>Start</h1></div>
+          <div id="d2">
+            <button type="submit" class="button green" id="green"></button>
+            <button type="submit" class="button blue" id="blue"></button>
+          </div>
         </div>
       </div>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="script/Weather.js"></script>
+    <script src="script/Game.js"></script>
+    <script src="script/ColorSequence.js"></script>
+    <script src="script/GamePlay.js"></script>
+    <script src="script/Player.js"></script>
+    <script src="script/miscFunctions.js"></script>
+    <script>
+      const $h1 = $('h1');
+      const $button = $('.button');
+      happyDance();
+      initiateResetButton();
+      setTimeout(function() {
+      let game = new Game();
+      },4000);
+    </script>
+
   </body>
 
 </html>
