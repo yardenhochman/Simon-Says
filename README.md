@@ -1,5 +1,4 @@
-# projectOne
-creating a browser adventure game
+# Simon Says
 
 In this project I decided to make a game using Class oriented design.
 Initially it was challenging to synchronize the sounds correctly. 
