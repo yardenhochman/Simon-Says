@@ -1,5 +1,9 @@
 # Simon Says
 
+Link to demonstration: https://yardenhochman.github.io/Simon-Says/
+
+
+
 In this project I decided to make a game using Class oriented design.
 Initially it was challenging to synchronize the sounds correctly. 
 However, by using setTimeout function I was able to do it, and also to disable
